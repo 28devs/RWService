@@ -1,0 +1,84 @@
+.faq
+  overflow: hidden
+  @extend .block
+
+  &__title
+    text: center
+
+  &__list
+    margin-top: 20px @md 40px @lg 60px @xl 70px
+    box: center space-between wrap
+
+    &-col
+      width: calc(100% + 30px) @md @lg 48%
+      margin: @md-down * -15px
+
+      & + &
+        margin-top: 4px @md 30px @lg 0
+        border-top: @md-down 1px rgba(0, 0, 0, 0.08) solid
+
+  &__item
+    box: top
+    text: left
+    padding-top: @md-down 20px
+    padding-right: @md-down 15px
+    padding-bottom: @md-down 20px
+    cursor: @md-down pointer
+
+    &-content
+      width: 100%
+
+    &.active
+      ^&-title
+        &:before
+          background-image: svg-load("icons/minus.svg")
+
+        &:after
+          opacity: 0
+
+      ^&-text
+        display: block
+
+    & + &
+      margin-top: 0 @md 30px @lg 50px
+      border-top: @md-down 1px rgba(0, 0, 0, 0.08) solid
+
+    &-icon
+      size: 32px
+      min-width: 32px
+      border-radius: 50%
+      background: #F6FAFD
+      background-position: center
+      background-repeat: no-repeat
+      margin-right: 20px @md 20px
+      margin-left: 20px @md 0
+      background-image: svg-load("icons/plus.svg") @md svg-load("icons/question.svg")
+      display: none @md block
+
+    &-title
+      text: 600 18px @md 20px
+      margin: 0 @md 0 0 16px
+      padding-right: @md-down 5px
+      box: center
+      cursor: pointer
+
+      &:before
+        content: ''
+        display: block @md none
+        size: 32px
+        min-width: 32px
+        margin: * 20px
+        background-image: svg-load("icons/plus.svg")
+
+      &:after
+        content: ''
+        margin-left: auto
+        display: block @md none
+        size: size("icons/arrow-dropdown.svg")
+        min-width: width("icons/arrow-dropdown.svg")
+        background-image: svg-load("icons/arrow-dropdown.svg")
+
+    &-text
+      overflow: hidden
+      display: @md-down none
+      margin: @md-down 9px 10px 0 72px

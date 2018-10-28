@@ -1,0 +1,46 @@
+.works
+  background: #F6FAFD
+  position: relative
+  overflow: hidden
+  @extend .block
+  padding-top: @lg-down 0
+
+  &__img
+    background: resolve("bg-works.jpg") center / cover
+    position: @lg absolute 0 null -1px 0
+    width: 100% @lg calc(50% - 105px)
+    height: 240px @md 400px @lg auto
+
+  &__title
+    margin-top: 50px @lg 0
+    text: center @lg left
+
+  &__container
+    padding-left: 0 @lg 365px @xl 500px
+
+  &__list
+    margin: 30px 0 40px @lg 40px 0 55px
+
+  &__item
+    box: center
+    text: left
+
+    & + &
+      margin-top: 20px
+
+    &-icon
+      size: 48px
+      min-width: 48px
+      border-radius: 50%
+      background: #FFF
+      margin-right: 20px
+      text: bold 16px #15C46B
+      font-family: $font-title
+      box: center middle
+
+    &-text
+      text: 18px 1.45 @lg 20px
+      font-family: $font-title
+
+  &__btn
+    text: center @lg left

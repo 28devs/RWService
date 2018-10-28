@@ -1,0 +1,57 @@
+.btn
+  padding: 0 44px
+  height: 60px
+  text: #fff center bold 18px 23px -0.43px
+  text-decoration: none
+  font-family: $font
+  border: 0
+  outline: 0
+  cursor: pointer
+  transition: $transition
+  border-radius: 5px
+  background: #15C46B
+  box-shadow: 0 0 2px rgba(21, 196, 107, 0.6)
+  user-select: none
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  white-space: nowrap
+  width: @md-down 100%
+
+  &__mobile-hide
+    display: none @md inline
+    margin-left: 4px
+    cursor: pointer
+
+  &:hover
+    background: #43CF88
+    box-shadow: 0 0 0 rgba(3, 111, 245, 0.3)
+
+  &:active
+    background: #109C55
+
+  &--outline
+    background: transparent
+    text: 600
+    box-shadow: none
+    border: 1px rgba(255, 255, 255, 0.4) solid
+
+    &:hover, &.active
+      background: #fff
+      box-shadow: none
+      text: #15C46B
+
+    &:active
+      background: #F3F3F3
+      text: #2B3045
+
+  &--outline-color
+    background: transparent
+    text: #2B3045 600
+    box-shadow: none
+    border: 1px #15C46B solid
+
+    &:hover
+      background: #15C46B
+      box-shadow: 0 0 2px rgba(21, 196, 107, 0.6)
+      text: #FFF

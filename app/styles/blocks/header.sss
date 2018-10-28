@@ -1,0 +1,54 @@
+.is-load .header
+  display: block
+
+.header
+  position: fixed 0 0 null 0
+  padding: 16px 0
+  z-index: 99
+  transition: .1s ease
+
+  &--sticky
+    background: #202742
+
+  &--fixed
+    background: #202742
+
+  &__container
+    box: center space-between
+
+  &__logo
+    background: resolve("logo.svg") no-repeat left center / contain
+    size: 170px 32px @md size("logo.svg")
+    margin-right: 10px @sm 0
+
+  &__nav
+    box: center
+    display: @xl-down none
+
+    &-link
+      text: #fff
+      text-decoration: none
+      opacity: .7
+      transition: .15s ease
+      display: block
+      white-space: nowrap
+
+      & + &
+        margin-left: 40px
+
+      &:hover
+        opacity: 1
+
+      &--active
+        opacity: 1
+        position: relative
+
+        &:after
+          content: ''
+          display: block
+          border-bottom: 2px #FFC92D solid
+          position: absolute null 0 -3px 0
+
+  &__btn
+    height: 50px
+    text: #15C46B 16px

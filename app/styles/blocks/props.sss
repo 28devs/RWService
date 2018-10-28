@@ -1,0 +1,41 @@
+.props
+  @extend .block
+
+  &__title
+    text: center
+
+  &__list
+    margin-top: 40px @lg 50px @xl 70px
+    box: vertical @lg horizontal left space-between
+
+  &__item
+    width: 100% @lg 30%
+    box: vertical center @md middle horizontal @lg vertical center
+    text: center @md left @lg center
+    padding: 0 @md * 10% @lg 0
+
+    & + &
+      margin-top: 30px @lg 0
+
+    &-icon
+      size: 100px
+      min-width: 100px
+      border-radius: 50%
+      background: #F6FAFD
+      background-position: center
+      background-repeat: no-repeat
+      margin-right: 0 @md 20px @lg 0
+      margin-bottom: 20px @md 0
+
+      &--1
+        background-image: svg-load("icons/clock.svg")
+
+      &--2
+        background-image: svg-load("icons/money.svg")
+
+      &--3
+        background-image: svg-load("icons/location.svg")
+
+    &-title
+      text: 600 18px
+      margin: 0 0 12px @lg 22px 0 12px

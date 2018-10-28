@@ -1,0 +1,41 @@
+.footer
+  background: #202742
+  padding: 28px 0 @lg 32px 0
+  margin-top: -1px
+  position: relative
+  z-index: 2
+
+  &__container
+    box: center vertical @lg horizontal space-between
+
+  &__logos
+    box: center
+
+    &-fedex
+      background: resolve("FedEx_Express.svg")
+      size: size("FedEx_Express.svg")
+      transform: scale(.8)
+      transform-origin: right
+
+    &-dhl
+      background: resolve("DHL_Express.svg")
+      size: size("DHL_Express.svg")
+      margin-left: 30px
+      border-radius: 5px
+      transform: scale(.8)
+      transform-origin: left
+
+  &__copy
+    text: center
+    margin: 20px 0 @lg 0
+
+    &-text
+      text: 14px rgba(222, 228, 255, .7)
+
+    &-link
+      text: 14px rgba(222, 228, 255, .4)
+      margin-top: 7px
+      display: inline-block
+
+  .social__item
+    size: 48px

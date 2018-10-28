@@ -1,0 +1,85 @@
+.hero
+  background: linear-gradient(
+      rgba(35, 44, 75, .85),
+      rgba(35, 44, 75, .85)
+    ), resolve("bg-1.jpg") center / cover
+
+  &__container
+    box: space-between wrap
+
+  &__info
+    width: 100% @xl 60%
+
+  &__title
+    text: #fff 600 28px 1.35 center @md 900 40px 1.1875 @xl 45px left
+    font-family: $font-title
+    margin-top: 100px @lg 120px @xl 150px
+    padding: 0 @lg 0 15% @xl 0
+
+    &-mark
+      display: inline
+      border-bottom: 2px #15C46B solid
+
+  &__pros
+    box: vertical @md space-between horizontal @xl vertical
+    margin-top: 40px @md 50px
+    margin-bottom: 40px @md 50px @xl 60px
+
+    &-item
+      box: middle horizontal @md center vertical @xl horizontal
+      width: 100% @md 31% @xl 100%
+
+      & + &
+        margin-top: 20px @md 0 @xl 30px
+
+    &-icon
+      border: 1px rgba(255, 255, 255, .5) solid
+      border-radius: 50%
+      size: 80px
+      min-width: 80px
+      margin-right: 20px @md 0 @xl 20px
+      margin-bottom: 0 @md 20px @xl 0
+      background-position: center
+      background-repeat: no-repeat
+
+      &--1
+        background-image: svg-load("icons/hero-01.svg")
+
+      &--2
+        background-image: svg-load("icons/hero-02.svg")
+
+      &--3
+        background-image: svg-load("icons/hero-03.svg")
+
+    &-text
+      text: #fff 16px 1.6 left @md 18px center @xl left
+
+      br
+        display: @xl-down none
+
+  &__form
+    width: 100% @xl 395px
+    box: right
+
+    .form
+      background: @xl resolve("hero-form-phone.png") no-repeat top center / 395px
+      padding: @xl 70px 45px 25px
+      position: relative
+      border-radius: @xl-down 20px 20px 0 0
+      width: 100% @lg 70% @xl 100%
+      margin: 0 auto
+
+      .input
+        position: relative
+        z-index: 2
+
+      &:after
+        content: ''
+        display: none @xl block
+        position: absolute null 0 0 0
+        z-index: 1
+        height: 80px
+        background: resolve("hero-form-phone-line.png") top center / 395px
+
+    &-title
+      text: bold 22px 1.2 -1.5px @md 28px

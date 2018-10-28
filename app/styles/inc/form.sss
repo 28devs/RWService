@@ -1,0 +1,128 @@
+.hero .form__success
+  position: @xl absolute 54px 30px 0 30px
+
+.form
+  background: #F6FAFD
+  padding: 30px 20px @md 40px 32px
+  display: block
+  position: relative
+  overflow: hidden
+  z-index: 1
+
+  &__title
+    text: $text-dark 600 26px 1.2 0.34px center @md 28px
+
+  &__text
+    text: $text-black 16px center @md 17px
+    margin: 13px 0 20px
+
+  &__success
+    position: absolute 0 0 0 0
+    box: vertical center middle
+    z-index: 9
+    padding: 0 20px
+    background: #F6FAFD
+
+  &__icon
+    background: svg-load("icons/success.svg")
+    size: size("icons/success.svg")
+    margin-bottom: 23px
+
+  .btn
+    width: 100%
+
+.input
+  position: relative
+
+  &-row
+    margin-bottom: 12px
+    box: vertical @md horizontal space-between @xl vertical
+
+    .input
+      width: 100% @md calc(50% - 6px) @xl 100%
+      margin-top: 12px @md 0 @xl 12px
+
+  &:before
+    content: ''
+    display: block
+    position: absolute 17px null null 16px
+
+  &--icon-1:before
+    background: svg-load("icons/input-01.svg")
+    size: size("icons/input-01.svg")
+
+  &--icon-2:before
+    background: svg-load("icons/input-02.svg")
+    size: size("icons/input-02.svg")
+
+  &--icon-3:before
+    background: svg-load("icons/input-03.svg")
+    size: size("icons/input-03.svg")
+
+  &__elem
+    border: 1px solid rgba(167, 191, 198, 0.5)
+    border-radius: 5px
+    padding: 15px 23px 15px 40px
+    height: 50px
+    outline: 0
+    text: $text-black 15px
+    font-family: $font
+    width: 100%
+    transition: .15s ease
+    display: block
+
+    textarea&
+      height: 100px
+      resize: none
+
+    &::placeholder
+      text: #A8B8BC
+
+    &:focus
+      border-color: #4A90E2
+
+  & + &
+    margin-top: 12px
+
+  &--error
+    ^&__elem
+      border-color: #D0021B
+      text: #EF1E38 !important
+
+      &::placeholder
+        text: #FF0F00
+
+  &__checkbox
+    display: none
+
+    &:checked + .input__checkbox-label-text:before
+      background-image: svg-load("icons/ok.svg")
+
+    &--error + .input__checkbox-label-text:before
+      border-color: #D0021B
+
+    &-label
+      cursor: pointer
+      user-select: none
+
+      &-wrap
+        cursor: pointer
+
+      &-text
+        text: 14px 1.2 rgba(0, 0, 0, 0.6)
+        box: center
+        cursor: pointer
+
+        &:before
+          content: ''
+          display: inline-block
+          size: 22px
+          min-width: 22px
+          border-radius: 3px
+          border: 1px rgba(168, 184, 188, 0.6) solid
+          margin-right: 15px
+          background-repeat: no-repeat
+          background-position: center
+
+      &-link
+        text: rgba(0, 0, 0, 0.6)

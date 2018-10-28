@@ -1,0 +1,75 @@
+.action
+  background: linear-gradient(
+      rgba(35, 44, 75, .85),
+      rgba(35, 44, 75, .85)
+    ), resolve("bg-4.jpg") center / cover
+  padding: 50px 0 0 @lg 100px 0
+
+  &__container
+    box: space-between wrap
+
+  &__info
+    width: 100% @xl 60%
+
+  &__form
+    width: 100% @xl 400px
+    box: right
+
+    .form
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
+      border-radius: 10px 10px 0 0 @lg 10px
+      width: 100% @lg 70% @xl 100%
+      margin: 0 auto
+
+    &-title
+      text: bold 22px 1.2 -1.5px @md 28px
+
+  &__title
+    text: #fff 900 28px 1.1875 center @md 40px @xl 45px left
+    font-family: $font-title
+
+    &-mark
+      display: inline
+      border-bottom: 2px #15C46B solid
+
+  &__pros
+    box: space-between horizontal wrap @xl vertical
+    margin-top: 50px
+    margin-bottom: 50px @xl 60px
+
+    &-item
+      box: center top vertical @xl horizontal
+      width: 100% @lg 30% @xl 100%
+
+      & + &
+        margin-top: 30px @lg 0 @xl 30px
+
+    &-icon
+      size: 100px
+      min-width: 100px
+      border-radius: 50%
+      background: #F6FAFD
+      background-position: center
+      background-repeat: no-repeat
+      margin-right: @xl 20px
+      margin-bottom: 20px @xl 0
+
+      &--1
+        background-image: svg-load("icons/money.svg")
+
+      &--2
+        background-image: svg-load("icons/security.svg")
+
+      &--3
+        background-image: svg-load("icons/waranty.svg")
+
+    &-title
+      text: #fff 600 18px 1.37 center @xl left
+      margin-bottom: 8px @xl 6px
+
+    &-text
+      text: #fff 16px 1.37 center @xl left
+      padding: 0 @md * 20% @lg 0
+
+      br
+        display: @xl-down none

@@ -1,0 +1,45 @@
+.reviews
+  background: linear-gradient(
+      rgba(35, 44, 75, .85),
+      rgba(35, 44, 75, .85)
+    ), resolve("bg-3.jpg") center / cover
+  @extend .block
+
+  &__title
+    text: center #fff
+
+  &__list
+    margin-top: 40px @lg 50px
+    margin-bottom: 40px @lg 50px
+
+  &__item
+    box: vertical center @lg horizontal
+    background: #fff
+    padding: 30px @lg 40px 30px
+    border-radius: 20px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1463)
+    text: center @lg left
+
+    & + &
+      margin-top: 20px @lg 30px
+
+    &-photo
+      border-radius: 50%
+      size: 100px
+      min-width: 100px
+      margin-right: 0 @lg 20px
+      margin-bottom: 12px @lg 0
+
+    &-title
+      text: 600 18px 1.6
+      margin-bottom: 8px
+
+      &-mark
+        text: 15px rgba(43, 48, 69, 0.5)
+        display: inline
+
+    &-text
+      text: rgba(0, 0, 0, 0.6)
+
+  &__btn
+    text: center

@@ -1,0 +1,13 @@
+header.header
+  .header__container.container
+    a.header__logo.scroll-to(href="#")
+
+    nav.header__nav(data-gumshoe)
+      each i in nav
+        a.header__nav-link.scroll-to(href="#" + i.id)= i.name
+
+    .header__social
+      .social
+        a.social__item.social__item--twitter(href="#!")
+        a.social__item.social__item--facebook(href="#!")
+        a.social__item.social__item--instagram(href="#!")

@@ -1,0 +1,77 @@
+.modal
+  position: fixed 0 0 0 0
+  background: rgba(34, 42, 76, .8)
+  z-index: 999
+  box: center middle
+
+  &--large
+    ^&__content
+      max-width: 928px
+      overflow-y: scroll
+      max-height: calc(100% - 40px)
+      background: #FFF
+      border-radius: 10px
+      padding: 25px 15px @md 35px 25px @lg 40px 70px 50px
+
+  &__content
+    max-width: 400px
+    overflow: hidden
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)
+    position: relative
+    margin: 10px
+
+    .form
+      padding: 30px *
+      border-radius: 10px
+
+  &__close
+    position: absolute 15px 15px null null
+    background: svg-load("icons/close.svg" fill: #2A345B)
+    size: 24px
+    cursor: pointer
+    opacity: .2
+    transition: .1s ease
+    z-index: 2
+
+    &:hover
+      background: svg-load("icons/close.svg" fill: #EF1E38)
+      opacity: 1
+
+.all-price
+  width: 100% @lg 768px
+
+  &__title
+    text: $text-dark 700 28px 1.2 center @md 36px @xl 40px
+    padding: 0 10px @md 0 40px
+    font-family: $font-title
+
+  &__tabs
+    box: middle wrap @lg space-between
+    margin: 25px 0 10px @md 30px 0 20px
+    margin: * -10px
+
+    &-item
+      white-space: nowrap
+      margin: * 10px
+      margin-bottom: 15px @md 20px
+      cursor: pointer
+      text: $text-black 600
+      opacity: .7
+      transition: .1s ease
+
+      &:hover
+        opacity: 1
+
+      &.active
+        opacity: 1
+        position: relative
+
+        &:after
+          content: ''
+          display: block
+          border-bottom: 3px #FFC92D solid
+          position: absolute null 0 -8px 0
+
+  &__btn
+    text: center
+    margin-top: 25px @md 40px

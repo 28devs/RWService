@@ -1,0 +1,92 @@
+.social
+  box: middle
+
+  &__item
+    size: 40px
+    border-radius: 50%
+    border: 1px rgba(170, 186, 255, 0.2073) solid
+    background-position: center
+    background-repeat: no-repeat
+    transition: $transition
+
+    &--twitter
+      background-image: svg-load("icons/twitter.svg" fill: #E6EBFD)
+
+      &:hover
+        background-image: svg-load("icons/twitter.svg" fill: #fff)
+
+    &--facebook
+      background-image: svg-load("icons/facebook.svg" fill: #E6EBFD)
+
+      &:hover
+        background-image: svg-load("icons/facebook.svg" fill: #fff)
+
+    &--instagram
+      background-image: svg-load("icons/instagram.svg" fill: #E6EBFD)
+
+      &:hover
+        background-image: svg-load("icons/instagram.svg" fill: #fff)
+
+    & + &
+      margin-left: 10px @md 15px
+
+    &:hover
+      color: #fff
+
+.block-title
+  text: $text-dark 700 28px 1.1875 @lg 900 40px @xl 48px
+  font-family: $font-title
+
+.icon-more
+
+  &:after
+    content: ''
+    display: block
+    background: svg-load("icons/load.svg" fill: #fff)
+    size: size("icons/load.svg")
+    margin-left: 20px
+    transition: $transition
+    margin-bottom: -1px
+
+  &:hover:after
+    background: svg-load("icons/load.svg" fill: #15C46B)
+
+  &:active:after
+    background: svg-load("icons/load.svg" fill: #2B3045)
+
+.table
+  background: #F6FAFD
+  border: 1px rgba(168, 184, 188, 0.3) solid
+
+  &__row
+    box: wrap
+
+    &:first-child
+      box: center
+      background: #2A345B !important
+      margin: -1px -1px 0 -1px
+
+      ^^&__col
+        text: #fff 600
+
+    &:hover
+      background: #eff4f7
+
+    & + &
+      border-top: 1px rgba(168, 184, 188, 0.3) solid @md 0
+
+  &__col
+    height: 100%
+    text: center
+    padding: 14px 20px
+    width: 100% @md 25%
+
+    &:first-child
+      text: 500 center @md left
+      width: 100% @md 50%
+
+    &:nth-child(2)
+      padding: @md-down 0 *
+
+    & + &
+      border-left: 0 @md 1px rgba(168, 184, 188, 0.3) solid
